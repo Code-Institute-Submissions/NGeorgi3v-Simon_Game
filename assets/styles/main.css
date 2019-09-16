@@ -1,11 +1,23 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lato|Ubunto|Roboto+Slab');
 
 /* RESETS AND CUSTOM STYLES TO BOOTSTRAP */
 html { scroll-behavior: smooth; }
 body{
     font-family: Lato;
+    background-image: url('../imgs/background-img.png');
 }
 .img-responsive{
     width: 100%;
 }
+
+/* Navigation */
+.navbar-brand{
+    color: #f4f4f4;
+    font-weight: bold;
+}
+#login{
+    margin-right: 10px;
+}
+
+
