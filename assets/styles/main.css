@@ -1,0 +1,11 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab');
+
+/* RESETS AND CUSTOM STYLES TO BOOTSTRAP */
+html { scroll-behavior: smooth; }
+body{
+    font-family: Lato;
+}
+.img-responsive{
+    width: 100%;
+}
