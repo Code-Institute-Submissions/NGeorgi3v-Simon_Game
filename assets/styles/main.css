@@ -26,7 +26,7 @@ body{
 
 /* Game controls */
 .game{
-    margin-top: 20vh;
+    margin-top: 15vh;
     position: relative;
     height: 55vh;
 }
@@ -143,7 +143,21 @@ input:checked + .slider:before {
 }
   
 #best{ 
-    color: #17a2b8; 
-    font-weight: bold;
     font-size: 25px;
+}
+
+.info-label{
+    font-weight: bold;
+    color: #17a2b8;
+}
+
+footer{
+    width: 100vw;
+    background-color: rgba(52, 58, 64, .85);
+    color: #f4f4f4;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
 }
