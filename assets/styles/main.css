@@ -35,10 +35,19 @@ body{
     position: absolute;
 }
 
-.game-btn{
+.game-btn, 
+.game-btn:active, 
+.game-btn:focus{
     width: 45%;
     height: 25vh;
     border-radius: 0;
+    box-shadow: 2px 2px 5px #000;
+    transition: width 1s ease, height 1s ease;
+}
+
+.btn-popup{
+    width: 50%;
+    height: 28vh;
 }
 
 #btn-green{
@@ -87,6 +96,10 @@ body{
     background-color: #2ecc71;
     border: 1px solid #27a85d;
     text-shadow: 2px 2px 5px #000;
+}
+
+#start-game-btn:hover {
+    background-color: #28a745;
 }
 
 /* Strict mode btn */
