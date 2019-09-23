@@ -15,10 +15,29 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Simon Game</a>
         <div class="btn-group pull-right">
-                <button class="btn btn-outline-success" id="login" type="button">Login</button>
-                <button class="btn btn-outline-info" id="info" type="button">Game info</button>
+            <button class="btn btn-outline-success" id="login" type="button">Login</button>
+            <button class="btn btn-outline-info" id="info" type="button">Game info</button>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="game">
+            <button class="game-btn btn btn-success" id="btn-green"></button>
+            <button class="game-btn btn btn-danger" id="btn-red"></button>
+            <button class="game-btn btn btn-warning" id="btn-yellow"></button>
+            <button class="game-btn btn btn-primary" id="btn-blue"></button>
+            <div class="controls">
+                <button type="button" id="start-game-btn" class="btn btn-success">Start</button>
+                <p>Strict:
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label> 
+                </p>
+                <p>Record: <span class id="best">0</span></p>
+            </div> <!--/.controls -->
+        </div><!-- /.game -->
+    </div><!-- /.container -->
 
     <!-- Boostrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
