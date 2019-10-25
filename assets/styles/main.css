@@ -74,6 +74,11 @@ body{
     border-bottom-right-radius: 100%;
 }
 
+.btn.disabled, .btn:disabled {
+    opacity: 1;
+    cursor: no-drop;
+}
+
 .controls{
     background-color: #212529;
     color: #f4f4f4;
