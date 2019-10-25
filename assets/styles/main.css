@@ -174,3 +174,9 @@ footer{
     position: fixed;
     bottom: 0;
 }
+
+/* Animation delay */
+
+.delay{
+    animation-delay: .5s;
+}

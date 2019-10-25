@@ -6,11 +6,11 @@ function getRandomNumber(){
 // Game constructor
 let Game = function(){
     this.score = 0;
-    this.strict = true;
-    this.greenBtn = document.getElementById("green-btn");
-    this.redBtn = document.getElementById("red-btn");
-    this.yellowBtn = document.getElementById("yellow-btn");
-    this.blueBtn = document.getElementById("blue-btn");
+    this.strict = false;
+    this.greenBtn = document.getElementById("btn-green");
+    this.redBtn = document.getElementById("btn-red");
+    this.yellowBtn = document.getElementById("btn-yellow");
+    this.blueBtn = document.getElementById("btn-blue");
     this.gameSequence = [];
     this.userSequence = [];
 
@@ -21,9 +21,38 @@ let Game = function(){
     this.executeSequence = function(){
         for(var i = 0; i < this.gameSequence.length; i++){
             console.log(i + " = " + this.gameSequence[i]);
-            // TODO
-            // Add visualization
+            if(this.gameSequence[i] == 1){
+                const el = this.greenBtn;
+                el.classList.add("animated", "delay", "pulse");
+                el.addEventListener('animationend', function() {el.classList.remove("animated", "pulse") });
+            }else if(this.gameSequence[i] == 2){
+                const el = this.redBtn;
+                el.classList.add("animated", "delay", "pulse");
+                el.addEventListener('animationend', function() {el.classList.remove("animated", "pulse") });
+            }else if(this.gameSequence[i] == 3){
+                const el = this.yellowBtn;
+                el.classList.add("animated", "delay", "pulse");
+                el.addEventListener('animationend', function() {el.classList.remove("animated", "pulse") });
+            }else{
+                const el = this.blueBtn;
+                el.classList.add("animated", "delay", "pulse");
+                el.addEventListener('animationend', function() {el.classList.remove("animated", "pulse") });
+            }
         }
+
+        // this.gameSequence.forEach(el => {
+        //     setTimeout(() =>{
+        //         if(el == 1)
+        //             console.log("green");
+        //         else if(el == 2)
+        //             console.log("red");
+        //         else if(el == 3)
+        //             console.log("yellow");
+        //         else
+        //             console.log("blue");
+        //     }, 500);
+        // });
+        
     }
 
     this.addUserInput = function(userInput){
