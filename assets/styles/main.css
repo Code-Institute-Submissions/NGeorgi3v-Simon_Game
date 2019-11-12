@@ -6,10 +6,10 @@ html { scroll-behavior: smooth; }
 body{
     font-family: Ubuntu;
     background-image: url('../imgs/background-img.png');
-    font-size: 20px;
+    font-size: 15px;
 }
 .btn{
-    font-size: 20px;
+    font-size: 13px;
 }
 .img-responsive{
     width: 100%;
@@ -26,12 +26,13 @@ body{
 
 /* Game controls */
 .game{
-    margin-top: 15vh;
     position: relative;
     height: 55vh;
+    max-width: 800px;
+    margin: 15vh auto 0;
 }
 
-.game-btn, .controls{
+.game-btn{
     position: absolute;
 }
 
@@ -80,10 +81,11 @@ body{
 }
 
 .controls{
+    position: fixed;
     background-color: #212529;
     color: #f4f4f4;
     width: 50%;
-    top: 12vh;
+    top: 40%;
     left: 25%;
     text-align: center;
     padding: 30px;
@@ -111,8 +113,8 @@ body{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 48px;
+    height: 24px;
 }
 
 .switch input {
@@ -137,8 +139,8 @@ body{
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -184,4 +186,61 @@ footer{
 
 .delay{
     animation-delay: .5s;
+}
+
+/* RESPONSIVE */
+/* Iphone 6/7/8 */
+@media only screen and (min-width: 321px){
+    body, .btn, footer h6{ font-size: 18px; }
+}
+/* Iphone 6/7/8 Plus */
+@media only screen and (min-width: 400px){
+    body, .btn{ font-size: 20px;}
+    footer h6{ font-size: 24px;}
+}
+/* Tablet */
+@media only screen and (min-width: 768px){
+    .navbar-brand{ font-size: 2rem; }
+    body, .btn, footer h6{ font-size: 25px; }
+    .switch{
+        width: 68px;
+        height: 38px;
+    }
+    .slider:before {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px){
+    .controls{
+        width: 30%;
+        left: 35%;
+    }
+}
+/* Laptop L */
+@media only screen and (min-width: 1600px){
+    body{background-image: url('../imgs/background-img-tv.png');}
+    .navbar-brand{ font-size: 3rem; }
+    body, .btn, footer h6{ font-size: 40px; }
+    .switch{
+        width: 98px;
+        height: 68px;
+    }
+    .slider:before {
+        width: 60px;
+        height: 60px;
+    }
+    .controls{
+        width: 25%;
+        left: 38%;
+        padding: 45px;
+    }
+}
+/* TV */
+@media only screen and (min-width: 2250px){
+    .controls{
+        width: 500px;
+        left: 41%;
+    }
 }

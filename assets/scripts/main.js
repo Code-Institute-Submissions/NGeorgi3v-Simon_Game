@@ -11,21 +11,20 @@ $(document).ready(() => {
         gameSeq = [], userSeq = [], score = 0, strict = false,
         loopVar = false,loopDuration = 1000, i = 0;
 
+    // Game initialization function
     function gameInit(){
         gameSeq = [];
         userSeq = [];
         score = 0;
         i = 0;
-        recordLabel.text(score);
+        console.log(score);
+        // recordLabel.text(score);
         gameSeq.push(getRandomNum());
         clearInterval(loopVar);
         loopVar = setInterval(executeSeq, loopDuration);
     }
 
-    startBtn.click(() =>{
-        gameInit();
-    });
-
+    // Strict mode toggle switch tap detection
     strictSwitch.change(() =>{
         if(strictSwitch.attr("checked", "checked") && strict == false){
             strict = true;
@@ -39,24 +38,7 @@ $(document).ready(() => {
         }
     });
 
-    greenBtn.click(() =>{
-        userSeq.push(1);
-        checkSeq();
-    });
-    redBtn.click(() =>{
-        userSeq.push(2);
-        checkSeq();
-    });
-    yellowBtn.click(() =>{
-        userSeq.push(3);
-        checkSeq();
-    });
-    blueBtn.click(() =>{
-        userSeq.push(4);
-        checkSeq();
-    });
-
-    
+    // Showing animated sequence to user
     function executeSeq(){
         $(".animated").attr("disabled", true);
         switch (gameSeq[i]) {
@@ -88,6 +70,7 @@ $(document).ready(() => {
         }
     }
 
+    // Checking if user sequence maches with game sequence
     function checkSeq(){
         for (let i = 0; i < userSeq.length; i++) {
             if(userSeq[i] != gameSeq[i]){
@@ -106,15 +89,35 @@ $(document).ready(() => {
         }
         if(userSeq.length == gameSeq.length){
             score++;
-            recordLabel.text(score);
+            console.log(score);
+            // recordLabel.text(score);
             gameSeq.push(getRandomNum());
             userSeq = [];
             loopVar = setInterval(executeSeq, loopDuration);
         }
     }
+    // User input detection
+    greenBtn.click(() =>{
+        userSeq.push(1);
+        checkSeq();
+    });
+    redBtn.click(() =>{
+        userSeq.push(2);
+        checkSeq();
+    });
+    yellowBtn.click(() =>{
+        userSeq.push(3);
+        checkSeq();
+    });
+    blueBtn.click(() =>{
+        userSeq.push(4);
+        checkSeq();
+    });
+    startBtn.click(() =>{
+        gameInit();
+    });
 
-
-
+    // Random number generator function
     function getRandomNum(){
         return Math.floor(Math.random() * 4) +1;
     }
