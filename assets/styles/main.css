@@ -85,7 +85,7 @@ body{
     background-color: #212529;
     color: #f4f4f4;
     width: 50%;
-    top: 40%;
+    top: 37%;
     left: 25%;
     text-align: center;
     padding: 30px;
@@ -162,7 +162,7 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
   
-#best{ 
+#score{ 
     font-size: 25px;
 }
 
@@ -188,6 +188,26 @@ footer{
     animation-delay: .5s;
 }
 
+/* Modal styling */
+
+.modal-content{
+    background-image: url('../imgs/modal_bg.jpg');
+    background-size: cover;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer{
+    background-color: rgba(52, 58, 64, .4);
+    color: #f4f4f4;
+}
+
+#emailHelp{ color: #ccc !important;}
+
+.form-control, .form-control:focus, .form-control:active{
+    background-color: rgba(52, 58, 64, .9);
+    color: #f4f4f4;
+}
 /* RESPONSIVE */
 /* Iphone 6/7/8 */
 @media only screen and (min-width: 321px){

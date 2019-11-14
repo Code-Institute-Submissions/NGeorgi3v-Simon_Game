@@ -16,10 +16,58 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Simon Game</a>
         <div class="btn-group pull-right">
-            <button class="btn btn-outline-success" id="login" type="button">Login</button>
-            <button class="btn btn-outline-info" id="info" type="button">Game info</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#game_login_modal" id="login" type="button">Login</button>
+            <button class="btn btn-outline-info" data-toggle="modal" data-target="#game_info_modal" id="info" type="button">Game info</button>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="game_info_modal" tabindex="-1" role="dialog" aria-labelledby="game_info_modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gane information...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div><!--/.modal-header-->
+                <div class="modal-body">
+                    Game info content goes here.....
+                </div><!--/.modal-body-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div><!--/.modal-footer-->
+            </div><!--/.modal-content-->
+        </div><!--/.modal-dialog-->
+    </div><!--/.modal-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="game_login_modal" tabindex="-1" role="dialog" aria-labelledby="game_login_modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div><!--/.modal-header-->
+                    <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="email_field">Email address</label>
+                                    <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div><!--/.form-group-->
+                                <div class="form-group">
+                                    <label for="password_field">Password</label>
+                                    <input type="password" class="form-control" id="password_field" placeholder="Password">
+                                </div><!--/.form-group-->
+                                <button type="button" id="login_btn" class="btn btn-primary">Login</button>
+                                <button type="button" id="register_btn" class="btn btn-info">Register</button>
+                            </form>
+                    </div><!--/.modal-body-->
+                </div><!--/.modal-content-->
+            </div><!--/.modal-dialog-->
+        </div><!--/.modal-->
 
     <div class="container">
         <div class="game">
@@ -27,7 +75,7 @@
             <button class="animated fast game-btn btn btn-danger" id="btn-red"></button>
             <button class="animated fast game-btn btn btn-warning" id="btn-yellow"></button>
             <button class="animated fast game-btn btn btn-primary" id="btn-blue"></button>
-            <div class="controls">
+            <div class="controls animated fast">
                 <button type="button" id="start-game-btn" class="btn btn-success">Start</button>
                 <p>Strict:
                     <label class="switch">
@@ -35,7 +83,7 @@
                         <span class="slider"></span>
                     </label> 
                 </p>
-                <!-- <p>Record: <span class="info-label" id="best">0</span></p> -->
+                <p>Score: <span class="info-label" id="score">0</span></p>
             </div> <!--/.controls -->
         </div><!-- /.game -->
     </div><!-- /.container -->
