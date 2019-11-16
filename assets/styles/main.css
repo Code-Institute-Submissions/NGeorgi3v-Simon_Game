@@ -24,6 +24,10 @@ body{
     margin-right: 10px;
 }
 
+#login,
+#profile{
+    display: none;
+}
 /* Game controls */
 .game{
     position: relative;

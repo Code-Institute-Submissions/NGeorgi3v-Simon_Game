@@ -1,5 +1,15 @@
-$(document).ready(() => {
+const setupUI = (user) => {
+    if(user){
+        $("#profile").html(user.displayName);
+        $("#profile").css("display", "block");
+        $("#login").css("display", "none");
+    }else{
+        $("#profile").css("display", "none");
+        $("#login").css("display", "block");
+    }
+}
 
+$(document).ready(() => {
     // Game controls
     let startBtn = $("#start-game-btn"),
         greenBtn = $("#btn-green"),
@@ -8,8 +18,6 @@ $(document).ready(() => {
         blueBtn = $("#btn-blue"),
         scoreLabel = $("#score"),
         strictSwitch = $("#strictMode"),
-        loginBtn = $("#login_btn"),
-        registerBtn = $("#register_btn"),
         gameSeq = [], userSeq = [], score = 0, strict = false,
         loopVar = false,loopDuration = 1000, i = 0;
 
@@ -141,5 +149,20 @@ $(document).ready(() => {
         return Math.floor(Math.random() * 4) +1;
     }
 
+    // // User system
+    // loginBtn.click(()=>{
+    //     let email = $("#email_field").val();
+    //     let password = $("#password_field").val();
+    //     // alert(email + " " + password);
+    //     if (validateEmail(email)) {
+            
+    //     } else {
+    //         alert("Email is not valid..!");
+    //     }
+    // });
 
+    // function validateEmail(email) {
+    //     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //     return re.test(email);
+    // }
 });

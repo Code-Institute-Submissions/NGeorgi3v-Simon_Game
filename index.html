@@ -7,6 +7,8 @@
     <title>Simon game</title>
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custon CSS -->
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -17,10 +19,11 @@
         <a class="navbar-brand" href="#">Simon Game</a>
         <div class="btn-group pull-right">
             <button class="btn btn-outline-success" data-toggle="modal" data-target="#game_login_modal" id="login" type="button">Login</button>
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#user_info" id="profile" type="button"> <i class="fa fa-user"></i> Username</button>
             <button class="btn btn-outline-info" data-toggle="modal" data-target="#game_info_modal" id="info" type="button">Game info</button>
         </div>
     </nav>
-    <!-- Modal -->
+    <!--Info Modal -->
     <div class="modal fade" id="game_info_modal" tabindex="-1" role="dialog" aria-labelledby="game_info_modal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -40,34 +43,98 @@
         </div><!--/.modal-dialog-->
     </div><!--/.modal-->
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="game_login_modal" tabindex="-1" role="dialog" aria-labelledby="game_login_modal" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div><!--/.modal-header-->
-                    <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="email_field">Email address</label>
-                                    <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                </div><!--/.form-group-->
-                                <div class="form-group">
-                                    <label for="password_field">Password</label>
-                                    <input type="password" class="form-control" id="password_field" placeholder="Password">
-                                </div><!--/.form-group-->
-                                <button type="button" id="login_btn" class="btn btn-primary">Login</button>
-                                <button type="button" id="register_btn" class="btn btn-info">Register</button>
-                            </form>
-                    </div><!--/.modal-body-->
-                </div><!--/.modal-content-->
-            </div><!--/.modal-dialog-->
-        </div><!--/.modal-->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div><!--/.modal-header-->
+                <div class="modal-body">
+                    <form id="login_form">
+                        <div class="form-group">
+                            <label for="email_field">Email address</label>
+                            <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div><!--/.form-group-->
+                        <div class="form-group">
+                            <label for="password_field">Password</label>
+                            <input type="password" class="form-control" id="password_field" placeholder="Password">
+                        </div><!--/.form-group-->
+                        <button type="submit" id="login_btn" class="btn btn-primary">Login</button>
+                        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#game_register_modal" class="btn btn-info">Register</button>
+                    </form>
+                </div><!--/.modal-body-->
+            </div><!--/.modal-content-->
+        </div><!--/.modal-dialog-->
+    </div><!--/.modal-->
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="game_register_modal" tabindex="-1" role="dialog" aria-labelledby="game_register_modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div><!--/.modal-header-->
+                <div class="modal-body">
+                    <form id="signup_form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username">
+                        </div><!--/.form-group-->
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div><!--/.form-group-->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div><!--/.form-group-->
+                        <button type="submit" id="register_btn" class="btn btn-primary">Register</button>
+                    </form>
+                </div><!--/.modal-body-->
+            </div><!--/.modal-content-->
+        </div><!--/.modal-dialog-->
+    </div><!--/.modal-->
+
+    <!-- Profile Modal -->
+    <div class="modal fade" id="user_info" tabindex="-1" role="dialog" aria-labelledby="user_info" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div><!--/.modal-header-->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="profile_username">Username</label>
+                            <input type="email" class="form-control" id="profile_username" placeholder="Username">
+                        </div><!--/.form-group-->
+                        <div class="form-group">
+                            <label for="profile_email">Email address</label>
+                            <input type="email" class="form-control" id="profile_email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div><!--/.form-group-->
+                        <div class="form-group">
+                            <label for="profile_password">Password</label>
+                            <input type="password" class="form-control" id="profile_password" placeholder="Password">
+                        </div><!--/.form-group-->
+                        <button type="submit" id="update_info" class="btn btn-primary">Update</button>
+                        <button type="button" id="log_out" class="btn btn-danger">Log out</button>
+                    </form>
+                </div><!--/.modal-body-->
+            </div><!--/.modal-content-->
+        </div><!--/.modal-dialog-->
+    </div><!--/.modal-->
 
     <div class="container">
         <div class="game">
@@ -95,8 +162,28 @@
     <!-- Boostrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script>
+        // Firebase initialization
+        var config = {
+            apiKey: "AIzaSyAme9BRLrrlyEOLkuIZAXFXICSYagwLspI",
+            authDomain: "simon-game-3d3b8.firebaseapp.com",
+            databaseURL: "https://simon-game-3d3b8.firebaseio.com",
+            projectId: "simon-game-3d3b8"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(config);
+
+        // Auth and Firestore refs
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
     <!-- Custom JS -->
-    <!-- <script src="./assets/scripts/game.js"></script> -->
+    <script src="./assets/scripts/auth.js"></script>
     <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
