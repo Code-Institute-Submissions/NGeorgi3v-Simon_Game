@@ -252,7 +252,7 @@ footer{
 @media only screen and (min-width: 1600px){
     body{background-image: url('../imgs/background-img-tv.png');}
     .navbar-brand{ font-size: 3rem; }
-    body, .btn, footer h6{ font-size: 40px; }
+    body, .btn, footer h6, #score{ font-size: 40px; }
     .switch{
         width: 98px;
         height: 68px;
