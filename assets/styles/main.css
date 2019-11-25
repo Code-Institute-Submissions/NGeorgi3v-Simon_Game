@@ -191,18 +191,20 @@ footer{
     background-size: cover;
 }
 
+#game_won .modal-content{
+    background-image: url('../imgs/game_won_bg.jpg');
+}
+
+#game_lost .modal-content{
+    background-image: url('../imgs/game_lost_bg.jpg');
+}
+
 .modal-header,
 .modal-body,
 .modal-footer{
     background-color: rgba(52, 58, 64, .4);
     color: #f4f4f4;
 }
-
-.form-control, .form-control:focus, .form-control:active{
-    background-color: rgba(52, 58, 64, .9);
-    color: #f4f4f4;
-}
-
 .form-group .btn{
     margin-top: 10px;
 }
@@ -211,6 +213,8 @@ footer{
 }
 
 .modal-body{
+    background-color: rgba(52, 58, 64, .9);
+    color: #f4f4f4;
     max-height: 55vh;
     overflow-y: auto;
 }

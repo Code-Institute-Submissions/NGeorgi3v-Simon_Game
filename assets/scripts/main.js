@@ -8,7 +8,7 @@ $(document).ready(() => {
         scoreLabel = $("#score"),
         strictSwitch = $("#strictMode"),
         gameSeq = [], userSeq = [], score = 0, strict = false,
-        loopVar = false,loopDuration = 1000, i = 0;
+        loopVar = false,loopDuration = 1000, i = 0, gameWon = false;
     // Game sounds
     var greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
         redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
@@ -19,6 +19,7 @@ $(document).ready(() => {
 
     // Game initialization function
     function gameInit(){
+        gameWon = false;
         gameSeq = [];
         userSeq = [];
         score = 0;
@@ -94,7 +95,8 @@ $(document).ready(() => {
                         $(".btn.animated").removeClass("pulse");
                         clearInterval(loopVar);
                         // Game over message
-                        console.log("Game over");
+                        $('#game_lost').modal('toggle');
+                        gameSeq = [];
                         break;
                     }
                 }
@@ -104,14 +106,18 @@ $(document).ready(() => {
         }
         if(userSeq.length == gameSeq.length){
             score++;
-            if(score == 5 && strict == true){
-                // Game is won!
-                console.log("Congratualtaions you won the game!");
-            }
             scoreLabel.text(score);
-            gameSeq.push(getRandomNum());
-            userSeq = [];
-            loopVar = setInterval(executeSeq, loopDuration);
+            if(score == 25 && strict == true){
+                // Game is won!
+                clearInterval(loopVar);
+                gameWon = true;
+                $('#game_won').modal('toggle');
+            }
+            if(gameWon == false){
+                gameSeq.push(getRandomNum());
+                userSeq = [];
+                loopVar = setInterval(executeSeq, loopDuration);
+            }
         }
     }
     // User input detection
