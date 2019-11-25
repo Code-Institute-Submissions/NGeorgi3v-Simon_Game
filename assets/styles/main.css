@@ -20,14 +20,7 @@ body{
     color: #f4f4f4;
     font-weight: bold;
 }
-#login{
-    margin-right: 10px;
-}
 
-#login,
-#profile{
-    display: none;
-}
 /* Game controls */
 .game{
     position: relative;
@@ -169,7 +162,6 @@ input:checked + .slider:before {
 #score{ 
     font-size: 25px;
 }
-
 .info-label{
     font-weight: bold;
     color: #17a2b8;
@@ -206,11 +198,21 @@ footer{
     color: #f4f4f4;
 }
 
-#emailHelp{ color: #ccc !important;}
-
 .form-control, .form-control:focus, .form-control:active{
     background-color: rgba(52, 58, 64, .9);
     color: #f4f4f4;
+}
+
+.form-group .btn{
+    margin-top: 10px;
+}
+ hr{
+    border-top: 1px solid #ccc!important;
+}
+
+.modal-body{
+    max-height: 55vh;
+    overflow-y: auto;
 }
 /* RESPONSIVE */
 /* Iphone 6/7/8 */

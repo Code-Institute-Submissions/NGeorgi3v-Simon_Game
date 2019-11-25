@@ -1,14 +1,3 @@
-const setupUI = (user) => {
-    if(user){
-        $("#profile").html(user.displayName);
-        $("#profile").css("display", "block");
-        $("#login").css("display", "none");
-    }else{
-        $("#profile").css("display", "none");
-        $("#login").css("display", "block");
-    }
-}
-
 $(document).ready(() => {
     // Game controls
     let startBtn = $("#start-game-btn"),
@@ -20,6 +9,13 @@ $(document).ready(() => {
         strictSwitch = $("#strictMode"),
         gameSeq = [], userSeq = [], score = 0, strict = false,
         loopVar = false,loopDuration = 1000, i = 0;
+    // Game sounds
+    var greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
+        redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
+        yellowBtnSound = new Audio('./assets/music/simonSound3.mp3'),   
+        blueBtnSound = new Audio('./assets/music/simonSound4.mp3'),
+        correctSeqSound = new Audio('./assets/music/Correct.wav'),
+        wrongSeqSound = new Audio('./assets/music/Incorrect.wav');
 
     // Game initialization function
     function gameInit(){
@@ -27,7 +23,6 @@ $(document).ready(() => {
         userSeq = [];
         score = 0;
         i = 0;
-        console.log(score);
         scoreLabel.text(score);
         gameSeq.push(getRandomNum());
         clearInterval(loopVar);
@@ -54,15 +49,19 @@ $(document).ready(() => {
         switch (gameSeq[i]) {
             case 1:
                 greenBtn.addClass("pulse");
+                greenBtnSound.play();
                 break;
             case 2:
                 redBtn.addClass("pulse");
+                redBtnSound.play();
                 break;
             case 3:
                 yellowBtn.addClass("pulse");
+                yellowBtnSound.play();
                 break;
             case 4:
                 blueBtn.addClass("pulse");
+                blueBtnSound.play();
                 break;
             default:
                 break;
@@ -83,6 +82,7 @@ $(document).ready(() => {
     // Checking if user sequence maches with game sequence
     function checkSeq(){
         for (let i = 0; i < userSeq.length; i++) {
+            // User made wrong sequence
             if(userSeq[i] != gameSeq[i]){
                 userSeq = [];
                 $(".controls").addClass("shake");
@@ -90,25 +90,24 @@ $(document).ready(() => {
                     $(".controls.animated").removeClass("shake");
                 });
                 if(strict == true){
-                    
                     if(loopVar){
                         $(".btn.animated").removeClass("pulse");
                         clearInterval(loopVar);
-                        gameInit();
+                        // Game over message
+                        console.log("Game over");
                         break;
                     }
                 }
-                // $(".game").addClass("shake");
-                // $(".game.animated").on('animationend', function() {
-                //     $(".controls.animated").removeClass("shake");
-                // });
                 loopVar = setInterval(executeSeq, loopDuration);
                 break;
             }
         }
         if(userSeq.length == gameSeq.length){
             score++;
-            console.log(score);
+            if(score == 5 && strict == true){
+                // Game is won!
+                console.log("Congratualtaions you won the game!");
+            }
             scoreLabel.text(score);
             gameSeq.push(getRandomNum());
             userSeq = [];
@@ -119,24 +118,28 @@ $(document).ready(() => {
     greenBtn.click(() =>{
         if(gameSeq.length > 0){
             userSeq.push(1);
+            greenBtnSound.play();
             checkSeq();
         }
     });
     redBtn.click(() =>{
         if(gameSeq.length > 0){
             userSeq.push(2);
+            redBtnSound.play();
             checkSeq();
         }
     });
     yellowBtn.click(() =>{
         if(gameSeq.length > 0){
             userSeq.push(3);
+            yellowBtnSound.play();
             checkSeq();
         }
     });
     blueBtn.click(() =>{
         if(gameSeq.length > 0){
             userSeq.push(4);
+            blueBtnSound.play();
             checkSeq();
         }
     });
@@ -148,21 +151,4 @@ $(document).ready(() => {
     function getRandomNum(){
         return Math.floor(Math.random() * 4) +1;
     }
-
-    // // User system
-    // loginBtn.click(()=>{
-    //     let email = $("#email_field").val();
-    //     let password = $("#password_field").val();
-    //     // alert(email + " " + password);
-    //     if (validateEmail(email)) {
-            
-    //     } else {
-    //         alert("Email is not valid..!");
-    //     }
-    // });
-
-    // function validateEmail(email) {
-    //     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     return re.test(email);
-    // }
 });
