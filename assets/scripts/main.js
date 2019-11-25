@@ -1,11 +1,11 @@
 $(document).ready(() => {
     // Game controls
-    let startBtn = $("#start-game-btn"),
-        greenBtn = $("#btn-green"),
-        redBtn = $("#btn-red"),
-        yellowBtn = $("#btn-yellow"),
-        blueBtn = $("#btn-blue"),
-        scoreLabel = $("#score"),
+    let startBtn     = $("#start-game-btn"),
+        greenBtn     = $("#btn-green"),
+        redBtn       = $("#btn-red"),
+        yellowBtn    = $("#btn-yellow"),
+        blueBtn      = $("#btn-blue"),
+        scoreLabel   = $("#score"),
         strictSwitch = $("#strictMode"),
         gameSeq = [], userSeq = [], score = 0, strict = false,
         loopVar = false,loopDuration = 1000, i = 0, gameWon = false;
@@ -13,9 +13,7 @@ $(document).ready(() => {
     var greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
         redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
         yellowBtnSound = new Audio('./assets/music/simonSound3.mp3'),   
-        blueBtnSound = new Audio('./assets/music/simonSound4.mp3'),
-        correctSeqSound = new Audio('./assets/music/Correct.wav'),
-        wrongSeqSound = new Audio('./assets/music/Incorrect.wav');
+        blueBtnSound = new Audio('./assets/music/simonSound4.mp3');
 
     // Game initialization function
     function gameInit(){
@@ -67,10 +65,11 @@ $(document).ready(() => {
             default:
                 break;
         }
+        // Check when animation is finished and remove class
         $(".btn.animated").on('animationend', function() {
             $(".btn.animated").removeClass("pulse");
-
         });
+        // Update game sequence level
         if(gameSeq.length == i+1){
             i = 0;
             $(".btn.animated").attr("disabled", false);
@@ -96,7 +95,6 @@ $(document).ready(() => {
                         clearInterval(loopVar);
                         // Game over message
                         $('#game_lost').modal('toggle');
-                        gameSeq = [];
                         break;
                     }
                 }
@@ -104,6 +102,7 @@ $(document).ready(() => {
                 break;
             }
         }
+        // User replicated sequence successfully
         if(userSeq.length == gameSeq.length){
             score++;
             scoreLabel.text(score);
@@ -113,6 +112,7 @@ $(document).ready(() => {
                 gameWon = true;
                 $('#game_won').modal('toggle');
             }
+            // Generate next sequence
             if(gameWon == false){
                 gameSeq.push(getRandomNum());
                 userSeq = [];
