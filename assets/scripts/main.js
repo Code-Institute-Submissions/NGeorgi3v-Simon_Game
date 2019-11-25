@@ -8,7 +8,7 @@ $(document).ready(() => {
         scoreLabel   = $("#score"),
         strictSwitch = $("#strictMode"),
         gameSeq = [], userSeq = [], score = 0, strict = false,
-        loopVar = false,loopDuration = 1000, i = 0, gameWon = false;
+        loopVar = false, loopDuration = 1000, i = 0, gameWon = false;
     // Game sounds
     var greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
         redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
@@ -30,7 +30,7 @@ $(document).ready(() => {
 
     // Strict mode toggle switch tap detection
     strictSwitch.change(() =>{
-        if(strictSwitch.attr("checked", "checked") && strict == false){
+        if(strictSwitch.attr("checked", "checked") && strict === false){
             strict = true;
             if(loopVar){
                 $(".btn.animated").removeClass("pulse");
@@ -89,7 +89,7 @@ $(document).ready(() => {
                 $(".controls.animated").on('animationend', function() {
                     $(".controls.animated").removeClass("shake");
                 });
-                if(strict == true){
+                if(strict === true){
                     if(loopVar){
                         $(".btn.animated").removeClass("pulse");
                         clearInterval(loopVar);
@@ -103,17 +103,17 @@ $(document).ready(() => {
             }
         }
         // User replicated sequence successfully
-        if(userSeq.length == gameSeq.length){
+        if(userSeq.length === gameSeq.length){
             score++;
             scoreLabel.text(score);
-            if(score == 25 && strict == true){
+            if(score === 25 && strict === true){
                 // Game is won!
                 clearInterval(loopVar);
                 gameWon = true;
                 $('#game_won').modal('toggle');
             }
             // Generate next sequence
-            if(gameWon == false){
+            if(gameWon === false){
                 gameSeq.push(getRandomNum());
                 userSeq = [];
                 loopVar = setInterval(executeSeq, loopDuration);
