@@ -163,9 +163,6 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     
     - You will not be able to click on the pads whilst the computer sequence is running, when a game is not being played or when you win or lose the game. 
     The game has been carefully programmed to be active and not active at relevant points in the game.  
-
-    - Also a win and lose sounds are provided for a clear distinction when the user get the sequence correct or no.
-    
     
 3. #### 'Game-Info' Modal
 
@@ -259,7 +256,6 @@ Fulfil what users need:
    - Able to check how the game should be play thanks to 'Game information' section.
    - Able to try and replicate the sequence as many times as he wants while not in 'strict' mode.
    - Able to hear each sound attached to the buttons.
-   - Able to hear a sound every time sequence is replicated successfully or not.
    - Able to start a brand new game at any given time.
    - Able to play the game on almost every device
    <br/>
@@ -301,7 +297,7 @@ The project was built using [Visual Studio Code](https://code.visualstudio.com/)
 
 - #### Sounds
     
-    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds are all taken from a [**freeCodeCamp**](https://www.freecodecamp.org/) Simon game tutorial.
+    - Sounds include 4 pad sounds. The sounds are all taken from a [**freeCodeCamp**](https://www.freecodecamp.org/) Simon game tutorial.
 
 ### Acknowledgements
 
