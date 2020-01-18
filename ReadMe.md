@@ -3,19 +3,17 @@ Interactive Frontend - Milestone Project 2 -Simon Game
 </h1>
 
 <h1 align="center">
-<!-- image of game on diffrent platforms -->
+![alt text](https://i.imgur.com/5eHO2sL.jpg "Mockup")
 </h1>
 
 
 <div align="center"> 
 
-[Simon Game](https://charliejt.github.io/Simon-Memory-Game/) is a very popular memory game dating back as far as 1978. It's a game fit for all ages
+[Simon Game](https://ngeorgi3v.github.io/Simon_Game/) is a very popular memory game dating back as far as 1978. It's a game fit for all ages
 to test memory and skill. This particular game features a strict option to make the game more challenging yet rewarding and a winning feature is also included
 to give the player a goal to achieve. In addition to friendly colours & sounds. You will have many hours of fun playing!
 <br><br>
-[**View Simon Game website here!**](https://charliejt.github.io/Simon-Memory-Game/)
-
-[**View Website Development in Cloud 9!**](https://ide.c9.io/charliejt/interactive_frontend_project)
+[**Live demo on the Simon game here!**](https://ngeorgi3v.github.io/Simon_Game/)
 
 </div>
 
