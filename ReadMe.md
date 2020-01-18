@@ -3,7 +3,9 @@ Interactive Frontend - Milestone Project 2 -Simon Game
 </h1>
 
 <h1 align="center">
+
 ![alt text](https://i.imgur.com/5eHO2sL.jpg "Mockup")
+
 </h1>
 
 
@@ -41,7 +43,6 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 6. [**Credits**](#credits)
     - [**Contents**](#contents)
     - [**Media**](#media)
-    - [**Help with code**](#help-with-code)
     - [**Acknowledgements**](#acknowledgements)
 
 7. [**Disclaimer**](#disclaimer)
@@ -56,10 +57,10 @@ The main goal of the Simon game is to provide a fun, challenging yet rewarding e
 ### Player Experience
 
 - Players immediately experience a clear, easy and intuitive feel for the game right away. Simple controls which allow the player to have an easy understanding of how to play the game. 
-- Should the player be confused at any point, a 'Game-Info' box has been provided to give an informative description of what features the game has to offer.
+- Just in case the player feels confused at any point, a 'Game-Info' box has been provided to give an informative description of what features the game has to offer.
 
 - Inviting sounds & bright colours have been added to each pad to give the player a clear distinction between each pad.
-Winning & losing features have also been included with modal pop-ups & sounds to provide the player with additional challenges and goals to achieve.
+Winning & losing features have also been included with modal pop-ups to provide the player with additional challenges and goals to achieve.
 
 - The player has no need for a back button or to reload the page. Easy and informative buttons have been provided at all times to ensure the
 the player has an easy way around the game.
@@ -81,8 +82,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 
 - #### Fonts
 
-    - The font **'Orbitron'** was chosen as the primary font to create the feel for an original and retro looking style to the game.
-    - The font **'Lato'** was chosen as the font for the 'Game-Info' modal to ensure the text is easy to read.
+    - The font [Ubuntu](https://fonts.google.com/specimen/Ubuntu)  was chosen as the primary font of the application.
 
 - #### Colours
 
@@ -103,7 +103,6 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     Styles have been incorporated to give the game as much of a 'real life' experience as possible. `box-shadow`'s
     have been included to provide a professional and innovative look as well as keeping to the original design of the game. 
     `cursor`'s have been added to each active clickable item for a better indication of where & when you can click.
-    Also, pads have been styled to have a very slight 3D effect to them.
     
     **Special styles include:**
     
@@ -132,8 +131,8 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 
    Wireframes were made using Photoshop CS6 for a clean looking design layout.
 
-   - Mobile version: [link to image](https://github.com/NGeorgi3v/TheMonkees/tree/master/user%20design%20experience/Skeleton%20plane) or [link to the Photoshop project](https://drive.google.com/open?id=1ZiJ5VQ-kojZYSDfhKsOPWh8otCkFg8uR)
-   - Dekstop version: [link to image](https://github.com/NGeorgi3v/TheMonkees/tree/master/user%20design%20experience/Skeleton%20plane) or [link to the Photoshop project](https://drive.google.com/open?id=1l3L3kZUe4Ust7Y3ZHdLR27EPGQREfD4f)
+   - Mobile version: [link to image](https://github.com/NGeorgi3v/Simon_Game/blob/master/user%20design%20experience/Skeleton%20plane/PSD_Template_mobile.jpg) or [link to the Photoshop project](https://drive.google.com/drive/folders/1MwpkeH3jEGBeL0KSm7GLwthJ386-sIwO)
+   - Dekstop version: [link to image](https://github.com/NGeorgi3v/Simon_Game/blob/master/user%20design%20experience/Skeleton%20plane/PSD_Template_mobile.jpg) or [link to the Photoshop project](https://drive.google.com/drive/folders/1MwpkeH3jEGBeL0KSm7GLwthJ386-sIwO)
    - **Please note that the designs shown are just for demonstration and might not match exactly the actual look of the website!**
     
 
@@ -164,6 +163,8 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     
     - You will not be able to click on the pads whilst the computer sequence is running, when a game is not being played or when you win or lose the game. 
     The game has been carefully programmed to be active and not active at relevant points in the game.  
+
+    - Also a win and lose sounds are provided for a clear distinction when the user get the sequence correct or no.
     
     
 3. #### 'Game-Info' Modal
@@ -239,9 +240,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 - HTML 5
 - CSS 3
 - Javascript ( ES6 )
-    - Sticky navigation in desktop version of the site
 - BOOTSTRAP 4
-    - Site layout, navigation and photos
 - Google Fonts
 - Git
 - Github
@@ -252,33 +251,40 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 
 
 ## Testing
+### UX
+Fulfil what users need:
+   - Able to deside whether they want to play in strict mode or not.
+   - Able to win or lose the game while in strict mode.
+   - Able to switch between game modes at any given time.
+   - Able to check how the game should be play thanks to 'Game information' section.
+   - Able to try and replicate the sequence as many times as he wants while not in 'strict' mode.
+   - Able to hear each sound attached to the buttons.
+   - Able to hear a sound every time sequence is replicated successfully or not.
+   - Able to start a brand new game at any given time.
+   - Able to play the game on almost every device
+    **Disclaimer!** Please note that all the test are done manually by the developer, since non of the JS functions are returning results back therefore no need for testing framework was needed!
 
-A full testing process can be found in a separate [tests.md](tests.md) file.
+### Code
+This site was checked with W3C HTML and CSS validators, no issues were found in any of them.
 
+### Browsers and devices
+This site was tested across diffrent browsers and on different devices to ensure that its responsive and compatible. During testing I noticed that the font-sizes of the text and the size of some of the images has to changed to be seen better from the users, also a few of the elements were resized in order for them to look better.
+
+Devices:
+- Chrome / Android 7 / Huawei P8 Lite
+- Chrome / Android 7 / Sony Xperia XA
+- Safari / iOS 12 / iPhone SE
+- Safari / iOS 12 / iPhone 6s Plus
+- Safari / iOS 12 / iPhone XS
+- Safari / iOS 12 / iPad Air 2
+- Opera / iOS 12 / MacBook Pro
+- Firefox / Windows 10 / MSI Notebook
+- Edge / Windows 10 / Dell Notebook
+- Safari / macOS Mojave / iMac
 
 ## Deployment
 
-The project was built using [Cloud9](https://c9.io), through a built-in function called 'Git', I could commit
-the project & push it up to [GitHub](https://github.com/).
-
-- To view the deployed version of [Simon Game!](https://charliejt.github.io/Simon-Memory-Game/) I needed to take the following steps:
-    - Log in to [GitHub](https://github.com/).
-    - Select **CharlieJT/Simon-Memory-Game** from the list of repositories.
-    - Select **Settings** from the navbar near the top of the page.
-    - Scroll down to where it says **Github Pages**, there is a subtitle labelled **Source**, click that and change the source to be **master branch**.
-    - The page is automatically refreshed and ready for deployment, it can take up to 5-10 minutes for it to be viewable.
-
-- To add this repository to your local workspace:
-    - Click on the [Simon Game repository on GitHub!](https://github.com/CharlieJT/Simon-Memory-Game) link.
-    - Select the green button on the right-hand side named **Clone or download** and copy the clone URL.
-    - Go into your local workspace and open up a new terminal (git bash).
-    - You will need to be inside of the directory that you want to add the cloning to.
-    - Type `git clone ` and paste the URL you copied from GitHub and press enter. It should look like this: 
-```console
-git clone https://github.com/*username*/*repository*
-```
-The process of cloning will now be completed. For further information on cloning,
- visit [How to clone from GitHub](https://help.github.com/en/articles/cloning-a-repository).
+The project was built using [Visual Studio Code](https://code.visualstudio.com/), through a built-in function called 'Source Control', I could commit the project & push it up to [GitHub](https://github.com/).
 
 
 ## Credits
@@ -290,36 +296,15 @@ The process of cloning will now be completed. For further information on cloning
 ### Media
 
 - #### Images
-    - The Main background image for the webpage, 'Game-Info' modal & 'Lose' was taken from [**Wallpaper Gallery**](https://wallpaper-gallery.net/).
-    - The background for the win modal was taken from [**Freepik**](https://www.freepik.com/).
-    - The Simon favicon was created in [**Ionos**](https://www.ionos.co.uk/tools/favicon-generator).
+    - The Main background image for the webpage, 'Game-Info' modal & 'Lose' was taken from [**Google images**](https://images.google.com/).
 
 - #### Sounds
     
-    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds were all created in [**GarageBand**](https://www.apple.com/uk/mac/garageband/).
-
-### Help with code
-
-- Ideas on how to write out my HTML for the Simon Board: [How to Program a Simon Game: HTML](https://www.youtube.com/watch?v=zwKoo7VDj44).
-- Ideas on how to write out my CSS for the Simon Board: [How to Program Simon Game: CSS](https://www.youtube.com/watch?v=muPIIfjazcU).
-- Ideas on how to get started with the Javascript for the Simon Board: [Simon Game JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=n_ec3eowFLQ).
-- Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU).
-- Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U).
-- Ideas on how to get each of the coloured pads to light up like a real light: [Creating Glow Effects with CSS](https://codersblock.com/blog/creating-glow-effects-with-css/).
-    
-The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
+    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds are all taken from a [**freeCodeCamp**](https://www.freecodecamp.org/) Simon game tutorial.
 
 ### Acknowledgements
 
-A huge thank you to:
-
-- Spencer Barriball (spence_mentor) - For discussing ideas, providing help wherever necessary and also there as a
-guide if I'm ever stuck with anything.
-
-- Tim Nelson (2BN-Tim_lead) - For taking the time to review the project and offering me constructive criticism to help
-make improvements.
-
-- Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occurring with my README.
+Any code written in this application is written by the developer, ideas were taken from a variety of youtube videos, but none were copied in no way.
 
 ## Disclaimer
 
