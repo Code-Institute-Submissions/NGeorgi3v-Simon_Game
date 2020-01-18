@@ -11,7 +11,7 @@ Interactive Frontend - Milestone Project 2 -Simon Game
 
 <div align="center"> 
 
-[Simon Game](https://ngeorgi3v.github.io/Simon_Game/) is a very popular memory game dating back as far as 1978. It's a game fit for all ages
+[Simon Game](https://en.wikipedia.org/wiki/Simon_(game)) is a very popular memory game dating back as far as 1978. It's a game fit for all ages
 to test memory and skill. This particular game features a strict option to make the game more challenging yet rewarding and a winning feature is also included
 to give the player a goal to achieve. In addition to friendly colours & sounds. You will have many hours of fun playing!
 <br><br>
@@ -132,7 +132,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
    Wireframes were made using Photoshop CS6 for a clean looking design layout.
 
    - Mobile version: [link to image](https://github.com/NGeorgi3v/Simon_Game/blob/master/user%20design%20experience/Skeleton%20plane/PSD_Template_mobile.jpg) or [link to the Photoshop project](https://drive.google.com/drive/folders/1MwpkeH3jEGBeL0KSm7GLwthJ386-sIwO)
-   - Dekstop version: [link to image](https://github.com/NGeorgi3v/Simon_Game/blob/master/user%20design%20experience/Skeleton%20plane/PSD_Template_mobile.jpg) or [link to the Photoshop project](https://drive.google.com/drive/folders/1MwpkeH3jEGBeL0KSm7GLwthJ386-sIwO)
+   - Dekstop version: [link to image](https://github.com/NGeorgi3v/Simon_Game/blob/master/user%20design%20experience/Skeleton%20plane/PSD_Template.jpg) or [link to the Photoshop project](https://drive.google.com/drive/folders/1MwpkeH3jEGBeL0KSm7GLwthJ386-sIwO)
    - **Please note that the designs shown are just for demonstration and might not match exactly the actual look of the website!**
     
 
