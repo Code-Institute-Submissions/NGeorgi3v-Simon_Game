@@ -262,6 +262,7 @@ Fulfil what users need:
    - Able to hear a sound every time sequence is replicated successfully or not.
    - Able to start a brand new game at any given time.
    - Able to play the game on almost every device
+   <br/>
     **Disclaimer!** Please note that all the test are done manually by the developer, since non of the JS functions are returning results back therefore no need for testing framework was needed!
 
 ### Code
