@@ -10,7 +10,7 @@ $(document).ready(() => {
         gameSeq = [], userSeq = [], score = 0, strict = false,
         loopVar = false, loopDuration = 1000, i = 0, gameWon = false;
     // Game sounds
-    var greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
+    let greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
         redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
         yellowBtnSound = new Audio('./assets/music/simonSound3.mp3'),   
         blueBtnSound = new Audio('./assets/music/simonSound4.mp3');
