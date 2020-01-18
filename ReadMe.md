@@ -182,7 +182,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     
 5. #### Win Modal
 
-    - When you get 20 sequences correct in strict mode without making a single mistake, there will be a win modal which will appear with a
+    - When you get 25 sequences correct in strict mode without making a single mistake, there will be a win modal which will appear with a
     celebratory image.
     
 6. #### Start Button
@@ -213,7 +213,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 
 1. #### Limitless Strict mode
 
-    - An option where the player can stay in strict mode and not be limited to 20 moves until they win. 
+    - An option where the player can stay in strict mode and not be limited to 25 moves until they win. 
     It would carry on playing until the player loses. This would allow the player to really test themselves to 
     see how far they would be able to go in strict mode.
 
