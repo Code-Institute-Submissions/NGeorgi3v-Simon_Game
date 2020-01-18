@@ -4,7 +4,7 @@ Interactive Frontend - Milestone Project 2 -Simon Game
 
 <h1 align="center">
 
-![alt text](https://i.imgur.com/5eHO2sL.jpg "Mockup")
+![alt text](https://i.imgur.com/mRVxwVx.png "Mockup")
 
 </h1>
 
