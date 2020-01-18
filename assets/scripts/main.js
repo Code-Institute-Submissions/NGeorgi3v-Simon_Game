@@ -13,7 +13,9 @@ $(document).ready(() => {
     let greenBtnSound = new Audio('./assets/music/simonSound1.mp3'),
         redBtnSound = new Audio('./assets/music/simonSound2.mp3'),
         yellowBtnSound = new Audio('./assets/music/simonSound3.mp3'),   
-        blueBtnSound = new Audio('./assets/music/simonSound4.mp3');
+        blueBtnSound = new Audio('./assets/music/simonSound4.mp3'),
+        correct = new Audio('./assets/music/Correct.wav'),
+        incorrect = new Audio('./assets/music/Incorrect.wav');
 
     // Game initialization function
     function gameInit(){
@@ -83,6 +85,7 @@ $(document).ready(() => {
     function checkSeq(){
         for (let i = 0; i < userSeq.length; i++) {
             // User made wrong sequence
+            incorrect.play();
             if(userSeq[i] != gameSeq[i]){
                 userSeq = [];
                 $(".controls").addClass("shake");
@@ -106,6 +109,7 @@ $(document).ready(() => {
         if(userSeq.length === gameSeq.length){
             score++;
             scoreLabel.text(score);
+            correct.play();
             if(score === 25 && strict === true){
                 // Game is won!
                 clearInterval(loopVar);
