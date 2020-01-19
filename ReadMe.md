@@ -87,7 +87,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
 - #### Colours
 
     - **Main Heading and Footer -** A white font was chosen to contrast nicely with the background of the webpage.
-    A dark grey background colour was chosen to indicate the header & footer fields, and there is opacity of 85% on the footer simply for esthetic purposes.
+    A dark grey background colour was chosen to indicate the header & footer fields, and there is opacity of 85% on the footer simply for aesthetic purposes.
 
     - **Game controls-** A light black color was choosen for the game controls background to contrast with the background of the application and make them pop-out.
 
@@ -106,7 +106,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     
     **Special styles include:**
     
-    - **Poping pads -** Poping pads have been designed to show the user the game sequence visually, with the use of
+    - **Popping pads -** Poping pads have been designed to show the user the game sequence visually, with the use of
     CSS trasformations provided from Animate.css , the effect has been achieved.
     
     
@@ -123,7 +123,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
  
     - The main background of the Simon board game is an image of a sequence of kids bricks in order to match with the conception of the application.
 
-    - A 'Monopolly' game image is being used for the 'Game info' modal of the application.
+    - A 'Monopoly' game image is being used for the 'Game info' modal of the application.
     
     - A Celebratory background has been applied to the 'Win' modal to give a nice sense of achievement and reward.
     
@@ -282,6 +282,25 @@ Devices:
 ## Deployment
 
 The project was built using [Visual Studio Code](https://code.visualstudio.com/), through a built-in function called 'Source Control', I could commit the project & push it up to [GitHub](https://github.com/).
+
+- To view the deployed version of [Simon Game!](https://ngeorgi3v.github.io/Simon_Game/) I needed to take the following steps:
+    - Log in to [GitHub](https://github.com/).
+    - Select **NGeorgi3v/Simon_Game** from the list of repositories.
+    - Select **Settings** from the navbar near the top of the page.
+    - Scroll down to where it says **Github Pages**, there is a subtitle labelled **Source**, click that and change the source to be **master branch**.
+    - The page is automatically refreshed and ready for deployment, it can take up to 5-10 minutes for it to be viewable.
+
+- To add this repository to your local workspace:
+    - Click on the [Simon Game repository on GitHub!](https://ngeorgi3v.github.io/Simon_Game/) link.
+    - Select the green button on the right-hand side named **Clone or download** and copy the clone URL.
+    - Go into your local workspace and open up a new terminal (git bash).
+    - You will need to be inside of the directory that you want to add the cloning to.
+    - Type `git clone ` and paste the URL you copied from GitHub and press enter. It should look like this: 
+```console
+git clone https://github.com/*username*/*repository*
+```
+The process of cloning will now be completed. For further information on cloning,
+ visit [How to clone from GitHub](https://help.github.com/en/articles/cloning-a-repository).
 
 
 ## Credits
